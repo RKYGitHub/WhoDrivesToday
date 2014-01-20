@@ -2,10 +2,11 @@
 <resources>
 
     <string name="app_name">Who Drives Today?</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="image_description_question_cat">the cat is unsure who drives today</string>
     <string name="title_activity_decide_driver">The Driver!</string>
-    <string name="driver_name">ERROR</string>
+    <string name="driver_error">ERROR</string>
+    <string name="driver_1">Robbie</string>
+    <string name="driver_2">Sarah</string>
 
 </resources>

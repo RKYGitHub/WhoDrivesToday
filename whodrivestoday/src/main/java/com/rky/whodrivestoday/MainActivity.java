@@ -1,18 +1,19 @@
 package com.rky.whodrivestoday;
 
+/**
+ * Created by RKY on 1/20/14.
+ */
+
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
 import android.content.Intent;
 import android.media.MediaPlayer;
 
+/**
+ * Displays an image on the whole app's face.
+ * When touched, plays a drumroll and then goes to the next screen
+ */
 public class MainActivity extends ActionBarActivity {
 
     @Override
@@ -20,7 +21,6 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -30,16 +30,21 @@ public class MainActivity extends ActionBarActivity {
         return true;
     }
 
-    public void GoToDecideDriver(View view) {
+    /**
+     * Plays the sound then goes to the decide activity
+     */
+    public void GoToDecideDriver() {
         PlaySound();
 
         Intent intent = new Intent(this, DecideDriver.class);
         startActivity(intent);
     }
 
+    /**
+     * Plays the drumroll sound
+     */
     private void PlaySound() {
         MediaPlayer player = MediaPlayer.create(getBaseContext(), R.raw.drumroll);
-        //player.setOnCompletionListener(Listener listener);
         player.start();
 
         while (player.isPlaying()) {
@@ -53,6 +58,6 @@ public class MainActivity extends ActionBarActivity {
 
         player.reset();
         player.release();
-        player = null;
+        player = null; // developer.android says to do this
     }
 }

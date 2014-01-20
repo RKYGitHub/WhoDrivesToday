@@ -12,6 +12,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+/**
+ * Selects one of the 2 drivers and displays text along with a background image.
+ */
 public class DecideDriver extends Activity {
 
     @Override
@@ -24,17 +27,17 @@ public class DecideDriver extends Activity {
         // randomly decide who drives
         Random randomGenerator = new Random();
         int driverNumber = randomGenerator.nextInt(2);
-        String driverName = "UNINITIALIZED";
+        String driverName;
 
         switch (driverNumber){
             case 0:
-                driverName = "Robbie";
+                driverName = getString(R.string.driver_1);
                 break;
             case 1:
-                driverName = "Sarah";
+                driverName = getString(R.string.driver_2);
                 break;
             default:
-                driverName = "ERROR";
+                driverName = getString(R.string.driver_error);
         }
 
 
