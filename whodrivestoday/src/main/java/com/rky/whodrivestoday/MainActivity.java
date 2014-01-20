@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.view.View;
 
 /**
  * Displays an image on the whole app's face.
@@ -33,8 +34,8 @@ public class MainActivity extends ActionBarActivity {
     /**
      * Plays the sound then goes to the decide activity
      */
-    public void GoToDecideDriver() {
-        PlaySound();
+    public void goToDecideDriver(View view) {
+        playSound();
 
         Intent intent = new Intent(this, DecideDriver.class);
         startActivity(intent);
@@ -43,7 +44,7 @@ public class MainActivity extends ActionBarActivity {
     /**
      * Plays the drumroll sound
      */
-    private void PlaySound() {
+    private void playSound() {
         MediaPlayer player = MediaPlayer.create(getBaseContext(), R.raw.drumroll);
         player.start();
 
