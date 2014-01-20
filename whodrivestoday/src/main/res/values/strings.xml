@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Who Drives Today?</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="image_description_question_cat">the cat is unsure who drives today</string>
+    <string name="title_activity_decide_driver">The Driver!</string>
+    <string name="driver_name">ERROR</string>
+
+</resources>
